@@ -123,11 +123,13 @@ button {
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     transform: scale(0.8);
     opacity: 0.5;
   }
+
   50% {
     transform: scale(1.2);
     opacity: 1;
@@ -293,11 +295,9 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgba(123, 104, 238, 0.05) 0%,
-    rgba(253, 121, 168, 0.05) 100%
-  );
+  background: radial-gradient(circle at 10% 20%,
+      rgba(123, 104, 238, 0.05) 0%,
+      rgba(253, 121, 168, 0.05) 100%);
   z-index: -1;
 }
 
@@ -324,11 +324,9 @@ button {
   font-weight: 700;
   color: var(--text-color);
   margin-bottom: 10px;
-  background: linear-gradient(
-    135deg,
-    var(--primary-color) 0%,
-    var(--accent-color) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--primary-color) 0%,
+      var(--accent-color) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -367,27 +365,29 @@ button {
   left: -20px;
   width: calc(100% + 40px);
   height: calc(100% + 40px);
-  background: linear-gradient(
-    135deg,
-    var(--primary-color) 0%,
-    var(--accent-color) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--primary-color) 0%,
+      var(--accent-color) 100%);
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   animation: blob-animation 8s linear infinite;
   z-index: 1;
 }
 
 @keyframes blob-animation {
+
   0%,
   100% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
+
   25% {
     border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
   }
+
   50% {
     border-radius: 50% 40% 50% 70% / 30% 50% 60% 40%;
   }
+
   75% {
     border-radius: 40% 60% 40% 50% / 60% 30% 60% 40%;
   }
@@ -442,6 +442,7 @@ button {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
   }
+
   100% {
     opacity: 0;
     transform: translateX(-50%) translateY(15px);
@@ -449,6 +450,7 @@ button {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -456,9 +458,11 @@ button {
   100% {
     transform: translateX(-50%) translateY(0);
   }
+
   40% {
     transform: translateX(-50%) translateY(-10px);
   }
+
   60% {
     transform: translateX(-50%) translateY(-5px);
   }
@@ -482,11 +486,9 @@ button {
   display: block;
   width: 80px;
   height: 4px;
-  background: linear-gradient(
-    135deg,
-    var(--primary-color) 0%,
-    var(--accent-color) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--primary-color) 0%,
+      var(--accent-color) 100%);
   margin: 0 auto;
   border-radius: 2px;
 }
@@ -525,11 +527,9 @@ button {
   position: absolute;
   bottom: 30px;
   right: -20px;
-  background: linear-gradient(
-    135deg,
-    var(--primary-color) 0%,
-    var(--accent-color) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--primary-color) 0%,
+      var(--accent-color) 100%);
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -655,11 +655,9 @@ button {
 
 .skill-progress {
   height: 100%;
-  background: linear-gradient(
-    135deg,
-    var(--primary-color) 0%,
-    var(--accent-color) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--primary-color) 0%,
+      var(--accent-color) 100%);
   border-radius: 5px;
   transition: width 1s ease;
 }
@@ -969,10 +967,10 @@ button {
   border-color: var(--primary-color);
 }
 
-.form-group input:focus ~ label,
-.form-group textarea:focus ~ label,
-.form-group input:not(:placeholder-shown) ~ label,
-.form-group textarea:not(:placeholder-shown) ~ label {
+.form-group input:focus~label,
+.form-group textarea:focus~label,
+.form-group input:not(:placeholder-shown)~label,
+.form-group textarea:not(:placeholder-shown)~label {
   top: -12px;
   left: 15px;
   font-size: 14px;
@@ -1059,7 +1057,200 @@ button {
   transform: translateY(-5px);
 }
 
-/* ===== RESPONSIVE STYLES ===== */
+/* ===== EXPERIENCE SECTION ===== */
+.experience {
+  background-color: var(--white);
+}
+
+.experience-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience-item {
+  background-color: var(--background-light);
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border-left: 5px solid var(--primary-color);
+  box-shadow: var(--box-shadow);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.experience-header h3 {
+  font-size: 22px;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.experience-date {
+  font-size: 14px;
+  color: var(--primary-color);
+  font-weight: 500;
+  background-color: rgba(123, 104, 238, 0.1);
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.experience-item p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* ===== SKILLS SECTION (UPDATED) ===== */
+.skills-category {
+  margin-bottom: 40px;
+}
+
+.skills-category h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(123, 104, 238, 0.3);
+}
+
+/* ===== OPEN SOURCE SECTION ===== */
+.opensource {
+  background-color: var(--background-light);
+}
+
+.opensource-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.opensource-item {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: var(--box-shadow);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.opensource-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.opensource-item p {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.opensource-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.opensource-link:hover {
+  color: var(--secondary-color);
+}
+
+/* ===== HACKATHONS SECTION ===== */
+.hackathons {
+  background-color: var(--white);
+}
+
+.hackathons-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hackathon-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-light);
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.hackathon-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hackathon-badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.hackathon-item.winner .hackathon-badge {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: var(--text-color);
+}
+
+.hackathon-item.finalist .hackathon-badge {
+  background: linear-gradient(135deg, #C0C0C0 0%, #A8A8A8 100%);
+  color: var(--text-color);
+}
+
+.hackathon-item.top25 .hackathon-badge {
+  background: linear-gradient(135deg, #CD7F32 0%, #A0522D 100%);
+  color: var(--white);
+}
+
+.hackathon-item.participant .hackathon-badge {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: var(--white);
+}
+
+.hackathon-info h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.hackathon-info p {
+  color: var(--text-light);
+  margin: 0;
+}
+
 @media (max-width: 1200px) {
   .hero-content .name {
     font-size: 50px;
